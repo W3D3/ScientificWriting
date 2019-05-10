@@ -18,7 +18,37 @@
 \bibentry{Myers1986}
 
 \subsection{Summary}
+The paper "An O(ND) Difference Algorithm and Its Variations" by Eugene W. Myers is about solving the shortest edit script problem by first showing that the problem is equivalent to finding the longest common subsequence of two sequences. The paper then presents an algorithm that can solve this problem and refines it further to improve time and space complexity.
 
+\subsection{Discussion}
+% Motivation: How did the author(s) motivate the importance of the results?
+\paragraph{Motivation/Significance}{
+The author of the paper motivates the importance of the algorithm by pointing out that there has been an extensive amount of research put into the field of edit script generation. He claims algorithms that solve this problem have applications in many various domains and they could all benefit from a sped up version of already exisiting solutions.
+}
+
+% Is the title informative and concise (why/why not)?
+% Is the title consistent with the content of the paper (and vice versa)?
+The title of the paper is very information and to the point. The main point of the paper is said algorithm and the title reflects that.
+% Does the abstract correspond to an elevator talk and convince the reader to read on (if not, what is missing)?
+% Does the abstract stand on its own (if not, what is missing)?
+The abstract is short and sums up the findings in the paper very well. Every chapter got one or two corresponding short sentences in the abstract, so nothing is missing.
+
+% Does the introduction contain the key elements discussed in the lecture (if not, what is missing)?
+% Background, known information
+% Knowledge gap, open problem
+% Hypothesis, questions, purpose statement
+% Approach, proposed solution
+% Results, concise and straight to the point
+The introduction presents the research background and lists a few previous solutions to the given problem and motivates the need for a faster algorithm. The author shortly goes over the selected approach and under which circumstances it falls short and finally presents their final solution to the problem. 
+% Does the description of the approach convey the idea (if not, what is missing)?
+% Is the description of the approach clear - could you explain the approach to someone else?
+% Are the research methods clearly described - could you replicate the experiments?
+% Evaluate the questions from the lecture on presenting the evaluation: who? what? when? where? why?
+% Are all results presented and described to answer the research questions?
+% How are graphs, charts, and tables used (with respect to the guidelines presented in the lectures)?
+% Are the discussions of the results meaningful (if not, what is missing)?
+% Are references to related works used correctly (if not, what should be improved)?
+% Furthermore, you can use the leading questions presented in the tutorial to perform your evaluation of the writing style.
 
 \section{How to Leak a Secret}
 % Give the reference to the paper
@@ -41,7 +71,7 @@ The authors motivate the importance of this algorithm by giving a usecase exampl
 The authors motivate the significance of the presented algorithm by making and proving various claims about its properties:
 The algorithm runs in linear time in relation to the number of keys used which is feasable for most small to mid sized groups. It is therefore more efficient than various other previous attempts at ring signatures.
 The algorithm is also proven to be secure as long as the underlying key generation is ie. it does not contain vulnverabilities that could lead to an attacker finding the original signer of a ring signature without knowing their private key or having the signer himself expose this fact.
-These properties make this algorithm a ideal candiate for ring signatures.
+These properties make this algorithm a ideal candiate for ring signatures and proves its significance.
 }
 % Presentation: Is the work comprehensible? Why? How are the results presented? Is the paper adequately structured? Why? 
 % Reproducible: Is the work reproducible? Why?
