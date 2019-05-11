@@ -16,6 +16,8 @@
 
 \section{An O(ND) Difference Algorithm and Its Variations}
 \bibentry{Myers1986}
+\\\\
+\emph{Citations (according to Google Scholar): 1063}
 
 \subsection{Summary}
 The paper "An O(ND) Difference Algorithm and Its Variations" by Eugene W. Myers is about solving the shortest edit script problem by first showing that the problem is equivalent to finding the longest common subsequence of two sequences. The paper then presents an algorithm that can solve this problem and refines it further to improve time and space complexity.
@@ -23,12 +25,12 @@ The paper "An O(ND) Difference Algorithm and Its Variations" by Eugene W. Myers 
 \subsection{Discussion}
 % Motivation: How did the author(s) motivate the importance of the results?
 \paragraph{Motivation/Significance}{
-The author of the paper motivates the importance of the algorithm by pointing out that there has been an extensive amount of research put into the field of edit script generation. He claims algorithms that solve this problem have applications in many various domains and they could all benefit from a sped up version of already exisiting solutions.
+The author of the paper motivates the importance of the algorithm by pointing out that there has been an extensive amount of research put into the field of edit script generation. He claims algorithms that solve this problem have applications in many various domains and that they could all benefit from a sped up version of already existing solutions.
 }
 
 % Is the title informative and concise (why/why not)?
 % Is the title consistent with the content of the paper (and vice versa)?
-The title of the paper is very information and to the point. The main point of the paper is said algorithm and the title reflects that.
+The title of the paper is very informative and to the point. The main point of the paper is said algorithm and the title reflects that.
 % Does the abstract correspond to an elevator talk and convince the reader to read on (if not, what is missing)?
 % Does the abstract stand on its own (if not, what is missing)?
 The abstract is short and sums up the findings in the paper very well. Every chapter got one or two corresponding short sentences in the abstract, so nothing is missing.
@@ -39,16 +41,33 @@ The abstract is short and sums up the findings in the paper very well. Every cha
 % Hypothesis, questions, purpose statement
 % Approach, proposed solution
 % Results, concise and straight to the point
-The introduction presents the research background and lists a few previous solutions to the given problem and motivates the need for a faster algorithm. The author shortly goes over the selected approach and under which circumstances it falls short and finally presents their final solution to the problem. 
-% Does the description of the approach convey the idea (if not, what is missing)?
-% Is the description of the approach clear - could you explain the approach to someone else?
-% Are the research methods clearly described - could you replicate the experiments?
-% Evaluate the questions from the lecture on presenting the evaluation: who? what? when? where? why?
-% Are all results presented and described to answer the research questions?
-% How are graphs, charts, and tables used (with respect to the guidelines presented in the lectures)?
-% Are the discussions of the results meaningful (if not, what is missing)?
-% Are references to related works used correctly (if not, what should be improved)?
-% Furthermore, you can use the leading questions presented in the tutorial to perform your evaluation of the writing style.
+The introduction presents the research background and lists a few
+previous solutions to the given problem and motivates the need for a
+faster algorithm. The author shortly goes over the selected approach and
+under which circumstances it falls short and finally presents their
+final solution to the problem. Every step towards the final algorithm is
+clearly described in a way that builds on knowledge previously explained
+in the paper. The whole paper gets very complicated in the end and to
+understand it, a reader without a strong background in this field probably
+needs to read it several times because lots of information is often
+hidden in a single sentence. All the properties of the edit graph are
+presented in lemmas and proven before they are included in the
+algorithm. These proves can be followed rather easily and doing so
+verifies the lemmas' correctness. The author smartly uses a graphical
+representation in two different stages of the algorithm and refers to
+the same figure multiple times in the paper. The figure itself is black
+and white and big enough to be readable without any zoom applied and is
+therefore readable digitally or in a printed form. Related work is a big
+part of an algorithm that should improve previous ones and the author
+always presents both improvements and shortcomings of his algorithm
+compared to other ones, which is very scientific. The author likes to
+include small examples throughout the paper to exemplify some of the
+parts of the algorithm which improves understandability. Most of the
+examples are unfortunately in the beginning and therefore the complex
+refinements that are explained at the end of the paper don't have these
+small bits of help for the reader. 
+Writing style overall is very clear
+and concise.
 
 \section{How to Leak a Secret}
 % Give the reference to the paper
