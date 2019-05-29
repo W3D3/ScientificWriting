@@ -30,10 +30,10 @@ The author of the paper motivates the importance of the algorithm by pointing ou
 
 % Is the title informative and concise (why/why not)?
 % Is the title consistent with the content of the paper (and vice versa)?
-The title of the paper is very informative and to the point. The main point of the paper is said algorithm and the title reflects that.
+The title of the paper is very informative and to the point. The main point of the paper is the above-said algorithm and the title reflects that.
 % Does the abstract correspond to an elevator talk and convince the reader to read on (if not, what is missing)?
 % Does the abstract stand on its own (if not, what is missing)?
-The abstract is short and sums up the findings in the paper very well. Every chapter got one or two corresponding short sentences in the abstract, so nothing is missing.
+The abstract is short and sums up the findings in the paper very well. Every chapter has one or two corresponding short sentences in the abstract, so nothing is missing.
 
 % Does the introduction contain the key elements discussed in the lecture (if not, what is missing)?
 % Background, known information
@@ -64,10 +64,22 @@ compared to other ones, which is very scientific. The author likes to
 include small examples throughout the paper to exemplify some of the
 parts of the algorithm which improves understandability. Most of the
 examples are unfortunately in the beginning and therefore the complex
-refinements that are explained at the end of the paper don't have these
+refinements that are explained at the end of the paper do not have these
 small bits of help for the reader. 
 Writing style overall is very clear
 and concise.
+
+%% FEEDBACK:
+% Your English is really good but you should include some more aspects that you have not mentioned so far:
+
+% e. g. 
+% methods
+% results
+% discussion of the results
+
+% And take a look at the questions on moodle. You should try to address some more
+
+% The same applies for the second review!
 
 \section{How to Leak a Secret}
 % Give the reference to the paper
@@ -77,28 +89,30 @@ and concise.
 \emph{Citations (according to Google Scholar): 1465}
 % Summarise the basic idea
 \subsection{Summary}
-The paper "How to leak a secret" \cite{rivest2001leak} indroduces the concept of a ring signature. This type of signature makes it possible to create a signature from a set of possible signers without their permission or coordination. Ring signatures do not give away which of the signers is the original author.  This implies that if someone was to check the signature, the original author of the signature would stay anonymous while still proving that they had to be someone among the used signers. %This works with any signature algorithm if it uses a trapdoor hashing function.
+The paper "How to leak a secret" \cite{rivest2001leak} indroduces the concept of a ring signature. This type of signature makes it possible to create a signature from a set of possible signers without their permission or coordination. Ring signatures do not give away who of the signers is the original author.  This implies that if someone was to check the signature, the original author of the signature would stay anonymous while still proving that it had to be someone among the used signers. %This works with any signature algorithm if it uses a trapdoor hashing function.
 
 % DISCUSS
 \subsection{Discussion}
 % Motivation: How did the author(s) motivate the importance of the results?
 \paragraph{Motivation}{
-The authors motivate the importance of this algorithm by giving a usecase example that would not be possible without ring signatures: Leaking a secret from inside a specific group to a journalist while wishing to stay anonymous. With ring signatures, this is easy to accomplish, as using your private key as well as all the other group members public keys to sign the document proves that it came from inside the group while not giving away the identity of the person who actually leaked the document. This shows precicely where the results of the papers could be applied in the real world to improve whistleblower anonymity. The authors also show that it can replace a Message Authentication Code when two entities communicate and don't want the signature to act as proof. Using their algorithm insted removes the need to exchange keys by just signing with a ring signature with both keys from entity A and entity B.
+The authors motivate the importance of this algorithm by giving a usecase example that would not be possible without ring signatures: Leaking a secret from a specific group to a journalist while wishing to stay anonymous. With ring signatures, this is easy to accomplish, as using your private key as well as all the other group members public keys to sign the document proves that it came from from a member of the goup while not giving away the identity of the person who actually leaked the document. This shows precisely where the results of the papers could be applied in the real world to improve whistleblower anonymity. The authors also show that it can replace a Message Authentication Code when two entities communicate and do not want the signature to act as proof. Using their algorithm insted removes the need to exchange keys by just signing with a ring signature with both keys from entity A and entity B.
 }
 % Significance: How did the author(s) show the significance of the results? 
 \paragraph{Significance}{
 The authors motivate the significance of the presented algorithm by making and proving various claims about its properties:
 The algorithm runs in linear time in relation to the number of keys used which is feasable for most small to mid sized groups. It is therefore more efficient than various other previous attempts at ring signatures.
-The algorithm is also proven to be secure as long as the underlying key generation is ie. it does not contain vulnverabilities that could lead to an attacker finding the original signer of a ring signature without knowing their private key or having the signer himself expose this fact.
-These properties make this algorithm a ideal candiate for ring signatures and proves its significance.
+The algorithm is also proven to be secure as long as the underlying key generation is I.e. it does not contain vulnverabilities that could lead to an attacker finding the original signer of a ring signature without knowing their private key or having the signer himself expose this fact.
+These properties make this algorithm an ideal candidate for ring signatures and proves its significance.
 }
 % Presentation: Is the work comprehensible? Why? How are the results presented? Is the paper adequately structured? Why? 
 % Reproducible: Is the work reproducible? Why?
 % Correctness: Why should we trust the results? 
 \paragraph{Presentation, Reproducability and Correctness}{
 Even though I am no security expert, most of the paper is easy to follow. The author always argues with logic and adds mathematical proves when needed. 
-The abstract is very well written and includes the most important bits of information in the paper without going into too much detail. The structure of the paper is very logical as well, after first explaining the concept,  terminology and motivation, the paper shows how efficient the algorithm is and then follows up with a step by step guide on how to generate and validate a ring signature. This also makes it relatively easy to replicate as this pseudocode only needs to be translated in any programming language. Even better would be a an implementation in the appendix or similar. Finally it goes on to prove the security of the suggested algorthm and some special cases. This part is very detailed and formal and therefore makes the results a lot more trustworthy.
-The only thing i found lacking was the title, as it is a bit too general and doesn't tell enough about what the paper is about. The authors also included a paragraph about a fictional world as a usecase scenario where they stop using scientific lingo all together which feels a bit  unprofessional.
+The abstract is very well written and includes the most important bits of information in the paper without going into too much detail. The structure of the paper is very logical as well, after first explaining the concept,  terminology and motivation, the paper shows how efficient the algorithm is and then follows up with a step by step guide on how to generate and validate a ring signature. This also makes it relatively easy to replicate as this pseudocode only needs to be translated in any programming language. It would be even better for there to be an implementation in the appendix or similar. Finally the author proves the security of the suggested algorthm in some special cases. This part is very detailed and formal and therefore makes the results a lot more trustworthy.
+The only thing I found lacking was the title, as it is a bit too general and does not tell the reader exactly what the paper is about. 
+% TODO What could you add to the title to make it more specific? Do you have any suggestions? 
+The authors also included a paragraph about a fictional world as a usecase scenario where they stop using scientific lingo all together which feels a bit  unprofessional.
 The references in the paper are from previous attempts at similar algorithms and cryptographic/mathematical building blocks that are used by this specific algorithm and its proofs. Some of them are also very famous papers in computer science which increases the reputability of this paper.
 }
 
