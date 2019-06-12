@@ -1,4 +1,4 @@
-\documentclass{scrartcl}
+\documentclass{scrartcl}[11pt]
 \usepackage[utf8]{inputenc}
 \usepackage{filecontents}
 \usepackage{natbib}
@@ -69,6 +69,15 @@ small bits of help for the reader.
 Writing style overall is very clear
 and concise.
 
+\subsection{Methods}
+The research method used are mostly observations that lead to a more optimized algorithm and/or a better worst time complexity. These observations are always accompanied by a formal proof.
+There is also one Probabilistic Analysis that observes the performance of the algorithm under a stochastic model to show that the average case performs better than the worst case.
+All in all research methods are very clean and every claim that is made is also validated.
+
+\subsection{Results}
+Significant results are scattered all over the chapters, which are then taken into account in the "A Linear Space Refinement" chapter to formalize the final algorithm. More optimzations are explored in the last chapter but are discarded because of signifcant memory consumption. The way the pseudocode is scattered around in different chapters is very confusing for readers trying to recreate the code in an actual programming language.
+For a reader it is also very hard to just consume the results of the paper. I would suggest moving some proofs to the appendix to improve readability.
+
 %% FEEDBACK:
 % Your English is really good but you should include some more aspects that you have not mentioned so far:
 
@@ -80,7 +89,7 @@ and concise.
 % And take a look at the questions on moodle. You should try to address some more
 
 % The same applies for the second review!
-
+\pagebreak
 \section{How to Leak a Secret}
 % Give the reference to the paper
 \bibentry{rivest2001leak} 
@@ -109,10 +118,9 @@ These properties make this algorithm an ideal candidate for ring signatures and 
 % Correctness: Why should we trust the results? 
 \paragraph{Presentation, Reproducability and Correctness}{
 Even though I am no security expert, most of the paper is easy to follow. The author always argues with logic and adds mathematical proves when needed. 
-The abstract is very well written and includes the most important bits of information in the paper without going into too much detail. The structure of the paper is very logical as well, after first explaining the concept,  terminology and motivation, the paper shows how efficient the algorithm is and then follows up with a step by step guide on how to generate and validate a ring signature. This also makes it relatively easy to replicate as this pseudocode only needs to be translated in any programming language. It would be even better for there to be an implementation in the appendix or similar. Finally the author proves the security of the suggested algorthm in some special cases. This part is very detailed and formal and therefore makes the results a lot more trustworthy.
-The only thing I found lacking was the title, as it is a bit too general and does not tell the reader exactly what the paper is about. 
-% TODO What could you add to the title to make it more specific? Do you have any suggestions? 
-The authors also included a paragraph about a fictional world as a usecase scenario where they stop using scientific lingo all together which feels a bit  unprofessional.
+The abstract is very well written and includes the most important bits of information in the paper without going into too much detail. It can stand on its own and motivates the reader to continue reading. The structure of the paper is very logical as well, after first explaining the concept,  terminology and motivation, the paper shows how efficient the algorithm is and then follows up with a step by step guide on how to generate and validate a ring signature. This also makes it relatively easy to replicate as this pseudocode only needs to be translated in any programming language. It would be even better for there to be an implementation in the appendix or similar. Finally the author proves the security of the suggested algorthm in some special cases. This part is very detailed and formal and therefore makes the results a lot more trustworthy.
+The only thing I found lacking was the title, as it is a bit too general and does not tell the reader exactly what the paper is about. A title that includes the core concept and purpose would fit a lot better, like: "Ring Signatures - an anonymous way to leak secrets" 
+The authors also included a paragraph about a fictional world as a usecase scenario where they stop using scientific lingo all together which feels a bit unprofessional.
 The references in the paper are from previous attempts at similar algorithms and cryptographic/mathematical building blocks that are used by this specific algorithm and its proofs. Some of them are also very famous papers in computer science which increases the reputability of this paper.
 }
 
