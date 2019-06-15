@@ -1,4 +1,4 @@
-\documentclass{scrartcl}[11pt]
+\documentclass[11pt]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage{filecontents}
 \usepackage{natbib}
@@ -118,12 +118,16 @@ These properties make this algorithm an ideal candidate for ring signatures and 
 % Correctness: Why should we trust the results? 
 \paragraph{Presentation, Reproducability and Correctness}{
 Even though I am no security expert, most of the paper is easy to follow. The author always argues with logic and adds mathematical proves when needed. 
-The abstract is very well written and includes the most important bits of information in the paper without going into too much detail. It can stand on its own and motivates the reader to continue reading. The structure of the paper is very logical as well, after first explaining the concept,  terminology and motivation, the paper shows how efficient the algorithm is and then follows up with a step by step guide on how to generate and validate a ring signature. This also makes it relatively easy to replicate as this pseudocode only needs to be translated in any programming language. It would be even better for there to be an implementation in the appendix or similar. Finally the author proves the security of the suggested algorthm in some special cases. This part is very detailed and formal and therefore makes the results a lot more trustworthy.
+The abstract is very well written and includes the most important bits of information in the paper without going into too much detail. It can stand on its own and motivates the reader to continue reading. The structure of the paper is very logical as well, after first explaining the concept,  terminology and motivation, the paper shows how efficient the algorithm is and then follows up with a step by step guide on how to generate and validate a ring signature.This also makes it relatively easy to replicate as this pseudocode only needs to be translated in any programming language. It would be even better for there to be an actual implementation in the appendix or similar. Finally the author makes some generalizations and proves the security of the suggested algorthm in some special cases. This part is very detailed and formal and therefore makes the results a lot more trustworthy.
 The only thing I found lacking was the title, as it is a bit too general and does not tell the reader exactly what the paper is about. A title that includes the core concept and purpose would fit a lot better, like: "Ring Signatures - an anonymous way to leak secrets" 
 The authors also included a paragraph about a fictional world as a usecase scenario where they stop using scientific lingo all together which feels a bit unprofessional.
 The references in the paper are from previous attempts at similar algorithms and cryptographic/mathematical building blocks that are used by this specific algorithm and its proofs. Some of them are also very famous papers in computer science which increases the reputability of this paper.
 }
+\subsection{Methods}
+The research method used here is primarily observations of properties of other algorithms that can be combined to form this new ring signature algorithm. Most of the observations are proven to be correct or declared as trivially true. A very good way of keeping my interest while reading was the way the author made every small thought in between results explicit and clear in the text. This made it a lot easier to follow.
 
+\subsection{Results}
+The results of this paper are two versions of the ring signature algorithm, with the difference being the public-key cryptosystem used, as well as the proof of security. Algorithmic results are presented in a visually distinct look and each line of pseudocode is accompanied by a sentence explaining what the line does and sometimes also why. This makes recreation of the algorithm very straight forward versus just putting some pseudocode and a block of text together.
 
 
 \bibliographystyle{plain}
